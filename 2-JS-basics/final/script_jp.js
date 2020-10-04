@@ -11,3 +11,4 @@ var job = false;
 //console.log(typeof age);          number
 //console.log(typeof job);          boolean
 
+``
