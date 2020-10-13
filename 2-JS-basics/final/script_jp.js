@@ -144,4 +144,53 @@ else if (Mike.avg === John.avg) {
         console.log("John and Mike's avg is the same, scoring at " + John.avg);
 }
 
+*** CLOSURES
+- returns functions
+
+function outer(x) {
+    return function inner(message = 'no message') {
+        return x + ' ' + message;
+    }
+}
+
+let outers = outer(69);
+console.log(outers('this my message')); // returns "69 this my message"
+
+*** ARRAYS
+
+let john = [6, 23,69,1];
+john.unshift(1); // ADDS TO THE BEGINNING OF THE ARRAY
+john.shift(); // REMOVES FIRST ELEMENT OF THE ARRAY
+john.push(1); // ADDS TO THE LAST POSITION OF THE ARRAY
+john.pop(); // REMOVES LAST ELEMENT OF THE ARRAY
+john.length; // GETS THE LENGTH OF THE ARRAY
+console.log(john);
+
+*** CODING CHALLENGE #3
+
+let value = [124, 48, 268];
+let tips = []; total = [];
+
+function tipCalculator(bill) {
+    let tip = checkPercentage(bill);
+    tips.push(tip);
+    total.push(tip + bill);
+}
+
+function checkPercentage(tip) {
+    if (tip < 50) {
+        return  tip * 0.2;
+    }
+    else if (tip < 201) {
+        return  tip * 0.15;
+    }
+    else if (tip >= 201) {
+        return  tip * 0.1;
+    }
+}
+
+value.forEach(tipCalculator);
+console.log(value,tips,total);
+
 */
+
