@@ -171,13 +171,13 @@ console.log(john);
 let value = [124, 48, 268];
 let tips = []; total = [];
 
-function tipCalculator(bill) {
-    let tip = checkPercentage(bill);
+function calculateTotal(bill) {
+    let tip = tipCalculator(bill);
     tips.push(tip);
     total.push(tip + bill);
 }
 
-function checkPercentage(tip) {
+function tipCalculator(tip) {
     if (tip < 50) {
         return  tip * 0.2;
     }
@@ -189,7 +189,7 @@ function checkPercentage(tip) {
     }
 }
 
-value.forEach(tipCalculator);
+value.forEach(calculateTotal);
 console.log(value,tips,total);
 
 */
